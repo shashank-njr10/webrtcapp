@@ -1,0 +1,22 @@
+.card {
+  width: 500px;
+  max-width: 90%;
+  min-height: 300px;
+  background: #1d1d1d;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(212, 90, 90, 0.4);
+  text-align: center;
+}
+.headingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 10px;
+}
