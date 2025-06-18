@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const startRegister = () => {
-    navigate('/register');
+    navigate('/authenticate');
     console.log("Button Clicked");
   };
 
@@ -22,7 +22,7 @@ const Home = () => {
           and Socket.IO for signaling.
         </p>
         <div>
-          <Button onClick={startRegister} text="Get Your UserName" />
+          <Button onClick={startRegister} text="Lets Go" />
         </div>
         <div className={styles.signinWrapper}>
           <span className={styles.invite}>Have an invite text?</span>

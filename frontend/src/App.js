@@ -7,9 +7,9 @@ import Activate from './pages/activate/Activate';
 import Rooms from './pages/Rooms/Rooms';
 
 // Simulated auth state – replace with real logic or context
-const isAuthenticated = true;
+const isAuthenticated = false;
 const user = {
-  isActivated: true,
+  isActivated: false,
 };
 
 // Route guard for guests (unauthenticated users)

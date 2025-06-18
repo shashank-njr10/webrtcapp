@@ -1,22 +1,28 @@
 .button {
-    display: flex;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 20px;
     background-color: #0077ff;
     border: none;
-    outline: none;
     border-radius: 100px;
-    align-items: center;
     color: white;
-    margin-left: 130px;
-    margin-top: 20px;
-    margin-bottom: 15px;;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 16px;
+    margin: 20px auto 15px auto; /* top: 20px, auto left/right (centered), bottom: 15px */
+    gap: 10px;
 }
+
 .button:hover {
     background-color: #005bb5;
 }
+
+.text {
+    line-height: 1;
+}
+
 .arrow {
-    margin-left: 8px;
+    width: 20px;
+    height: 20px;
 }
