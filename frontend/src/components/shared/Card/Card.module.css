@@ -6,7 +6,10 @@
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(212, 90, 90, 0.4);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .headingWrapper {
   display: flex;

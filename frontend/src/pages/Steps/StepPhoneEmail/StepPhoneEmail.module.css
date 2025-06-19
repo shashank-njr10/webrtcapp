@@ -30,3 +30,14 @@
 .active{
     background: #0077ff;
 }
+
+.bottomParagraph {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: justify;
+    align-items: center;
+}
