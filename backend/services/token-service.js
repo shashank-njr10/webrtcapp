@@ -1,10 +1,10 @@
 const jwt = require("jsonwebtoken");
 
-const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
-const refreshTokenSecret = process.env.REFRESH_TOKEN_SECRET;
+const accessTokenSecret = process.env.JWT_ACCESS_TOKEN_SECRET;
+const refreshTokenSecret = process.env.JWT_REFRESH_TOKEN_SECRET;
 
 class TokenService {
-  generateAccessToken(payload) {
+  generateAccessTokens(payload) {
     const accessToken = jwt.sign(payload, accessTokenSecret, {
       expiresIn: "1h", // Access token valid for 15 minutes
     });

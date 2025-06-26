@@ -5,15 +5,11 @@ import Navigation from './components/shared/navigation/navigation';
 import Authenticate from './pages/Authenticate/Authenticate';
 import Activate from './pages/activate/Activate';
 import Rooms from './pages/Rooms/Rooms';
-
-// Simulated auth state – replace with real logic or context
-const isAuthenticated = false;
-const user = {
-  isActivated: false,
-};
+import { useSelector } from 'react-redux';
 
 // Route guard for guests (unauthenticated users)
 const GuestRoute = ({ children }) => {
+  const {isAuthenticated} = useSelector((state) => state.auth)
   if (isAuthenticated) {
     return <Navigate to="/rooms" replace />;
   }
@@ -22,6 +18,7 @@ const GuestRoute = ({ children }) => {
 
 // Route guard for users who are authenticated but may not be activated
 const SemiProtectedRoute = ({ children }) => {
+  const {user, isAuthenticated} = useSelector((state) => state.auth)
   if (!isAuthenticated) {
     return <Navigate to="/authenticate" replace />;
   }
@@ -33,6 +30,7 @@ const SemiProtectedRoute = ({ children }) => {
 
 // Route guard for fully authenticated and activated users
 const ProtectedRoute = ({ children }) => {
+  const {user, isAuthenticated} = useSelector((state) => state.auth)
   if (!isAuthenticated) {
     return <Navigate to="/" replace />;
   }
